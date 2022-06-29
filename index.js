@@ -51,7 +51,7 @@ const questions = [
     },
     {
         message: `Please enter contribution guidelines:`,
-        name: 'contribution',
+        name: 'contributing',
         type: 'input',
     },
     {
@@ -61,9 +61,14 @@ const questions = [
     },
     {
         message: `Please enter your GitHub username:`,
-        name: 'git-username',
+        name: 'github',
         type: 'input',
     },
+    {
+        message: `Please enter your email:`,
+        name: 'email',
+        type: 'input',
+    }
 ];
 const titles = [`Project`, `Description`, `Installation`, `Usage`, `License`, `Contributing`, `Tests`];
 
@@ -82,7 +87,7 @@ function writeToFile(fileName, data) {
 function promptUser() {
     inquirer.prompt(questions).then((answers) => {
         console.log(answers);
-        //writeToFile('README.md',answers);
+        writeToFile('README.md',answers);
     }).catch((error) => {
         if (error.isTtyError) {
 
