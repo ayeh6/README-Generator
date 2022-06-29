@@ -105,8 +105,7 @@ ${data.testing}
 
 ## Questions
 [Github Profile](https://github.com/${data.github})  
-If you have any questions, reach out to me at ${data.email}
-    `;
+If you have any questions, reach out to me at ${data.email}`;
 }
 
 module.exports = generateMarkdown;

@@ -70,8 +70,6 @@ const questions = [
         type: 'input',
     }
 ];
-const titles = [`Project`, `Description`, `Installation`, `Usage`, `License`, `Contributing`, `Tests`];
-
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
@@ -87,20 +85,20 @@ function writeToFile(fileName, data) {
 function promptUser() {
     inquirer.prompt(questions).then((answers) => {
         console.log(answers);
-        writeToFile('README.md',answers);
+        writeToFile('generated-README.md',answers);
     }).catch((error) => {
         if (error.isTtyError) {
-
+            console.log("Prompt couldn't be rendered in current environment");
+            console.log(error.isTtyError);
         }
         else {
-
+            console.log(error);
         }
     });
 }
 
 // TODO: Create a function to initialize app
 function init() {
-    console.log('a program');
     promptUser();
 }
 
