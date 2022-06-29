@@ -47,7 +47,7 @@ THEN I am taken to the corresponding section of the README
 
 ### Walkthrough Video
 
-![](./screenshot.jpg)
+[Video Link](https://drive.google.com/file/d/15SQFfurqskW5ukiBDokk5fgiaDmZtTcN/view?usp=sharing)
 
 ### Links
 
